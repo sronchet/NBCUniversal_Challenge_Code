@@ -61,7 +61,6 @@ class ShowItemsPage extends Component {
     });
   } 
 
-  //create a loop that will loop through the state and display each image 
   /* const buttonForAll = () => {
     const [showFilms, setShowFilms] = React.useState(false)
     const onClick = () => setShowFilms(true)
@@ -83,13 +82,11 @@ class ShowItemsPage extends Component {
     return(
       <div>
         <label><input type="radio" value="All" onHandleClick= {this.handleClick1()}></input>All</label>
-         {this.state.films.map((title, img) => {
-          if (title === "Botched"){
-            return <img src={img}></img>; 
-          }
-        })} 
         <label><input type="radio" value="TV" onHandleClick= {this.handleClick2}></input>TV</label>
         <label><input type="radio" value="Digital Content" onHandleClick= {this.handleClick3}></input>Digital Content</label>
+        {this.state.films.map((title, img) => {
+           <div src={this.state.films}><img src={img}></img></div>
+        })} 
       </div>
     );
 
